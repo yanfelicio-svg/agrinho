@@ -1,1 +1,342 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte | Futuro Sustentável</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #4caf50;
+            --dark: #1b3a1e;
+            --light: #f4f9f5;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fff8;
+        }
+
+        header {
+            background: rgba(46, 125, 50, 0.95);
+            color: white;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Banner */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?sustainable-farm') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #388e3c;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 20px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                padding: 20px;
+            }
+            .menu.active { display: flex; }
+            .hamburger { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">🌱 Agro Forte</div>
+            <div class="hamburger" id="hamburger">☰</div>
+            <div class="menu" id="menu">
+                <a href="#producao">Produção</a>
+                <a href="#sustentabilidade">Sustentabilidade</a>
+                <a href="#desafios">Desafios</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Equilíbrio entre produção e meio ambiente</p>
+            <p style="font-size:1.3rem;">Produzir hoje preservando o amanhã</p>
+            <a href="#producao" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section id="introducao">
+        <h2>Bem-vindo ao Futuro do Campo</h2>
+        <p style="text-align:center; font-size:1.2rem; max-width:800px; margin:0 auto;">
+            O agronegócio brasileiro é um dos mais importantes do mundo. Neste site mostramos como é possível 
+            crescer economicamente enquanto preservamos os recursos naturais para as futuras gerações.
+        </p>
+    </section>
+
+    <!-- SEÇÃO 1 - PRODUÇÃO AGRÍCOLA -->
+    <section id="producao" style="background:#f8fff8;">
+        <h2>Produção Agrícola</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Importância Econômica</h3>
+                <p>O agronegócio gera empregos, impulsiona exportações e é fundamental para o PIB brasileiro.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tractor"></i>
+                <h3>Modernização do Campo</h3>
+                <p>Tecnologias de ponta aumentam a produtividade com menor impacto ambiental.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-seedling"></i>
+                <h3>Crescimento Sustentável</h3>
+                <p>Produção responsável que garante alimento para o presente e o futuro.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 - SUSTENTABILIDADE -->
+    <section id="sustentabilidade">
+        <h2>Sustentabilidade no Campo</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Energia Renovável</h3>
+                <p>Uso de energia solar e eólica nas propriedades rurais.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tint"></i>
+                <h3>Irrigação Inteligente</h3>
+                <p>Economia de água com sensores e automação.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-drone"></i>
+                <h3>Drones e Agricultura de Precisão</h3>
+                <p>Monitoramento preciso e redução de insumos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3 - DESAFIOS -->
+    <section id="desafios" style="background:#fff5f5;">
+        <h2>Desafios Ambientais</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Desmatamento</h3>
+                <p>Perda de biodiversidade e habitats naturais.</p>
+            </div>
+            <div class="card">
+                <h3>Uso Excessivo de Água</h3>
+                <p>Escassez hídrica em diversas regiões.</p>
+            </div>
+            <div class="card">
+                <h3>Emissões de Carbono</h3>
+                <p>Contribuição para o aquecimento global.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4 - SOLUÇÕES -->
+    <section id="solucoes">
+        <h2>Soluções e Futuro</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-leaf"></i>
+                <h3>Agricultura Regenerativa</h3>
+                <p>Recuperação do solo e aumento da biodiversidade.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-recycle"></i>
+                <h3>Reflorestamento e Rotação de Culturas</h3>
+                <p>Práticas que devolvem vida ao solo.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>Tecnologia e IA</h3>
+                <p>Inteligência artificial otimizando a produção.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" style="background:#2e7d32; color:white;">
+        <h2>Faça Parte Dessa Mudança</h2>
+        <div style="max-width:600px; margin:0 auto;">
+            <form id="contactForm">
+                <input type="text" placeholder="Seu nome" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;" required><br>
+                <input type="email" placeholder="Seu e-mail" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;" required><br>
+                <textarea placeholder="Sua mensagem" rows="5" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;"></textarea><br>
+                <button type="submit" class="btn" style="background:white; color:#2e7d32; width:100%;">Enviar Mensagem</button>
+            </form>
+        </div>
+        <p style="text-align:center; margin-top:40px; font-style:italic;">
+            “O futuro da produção depende das escolhas sustentáveis feitas hoje.”
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Agro Forte - Futuro Sustentável | Projeto Educacional</p>
+        <p>Equilíbrio entre produção e meio ambiente</p>
+    </footer>
+
+    <script>
+        // Menu Hamburguer
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Formulário
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Mensagem enviada com sucesso! Obrigado por contribuir com um agro mais sustentável.');
+            this.reset();
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
