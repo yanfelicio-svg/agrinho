@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -65,7 +64,7 @@
         /* Banner */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?sustainable-farm') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,6 +114,16 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: var(--primary);
+        }
+
+        /* Estilo para as Imagens Integradas */
+        .section-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
         }
 
         .grid {
@@ -206,6 +215,8 @@
     <!-- SEÇÃO 1 - PRODUÇÃO AGRÍCOLA -->
     <section id="producao" style="background:#f8fff8;">
         <h2>Produção Agrícola</h2>
+        <!-- Imagem de Modernização no Campo -->
+        <img class="section-image" src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=1200&q=80" alt="Modernização e Tecnologia no Campo">
         <div class="grid">
             <div class="card">
                 <i class="fas fa-chart-line"></i>
@@ -228,6 +239,8 @@
     <!-- SEÇÃO 2 - SUSTENTABILIDADE -->
     <section id="sustentabilidade">
         <h2>Sustentabilidade no Campo</h2>
+        <!-- Imagem de Energia Solar/Renovável no Campo -->
+        <img class="section-image" src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Energia Renovável e Sustentabilidade">
         <div class="grid">
             <div class="card">
                 <i class="fas fa-solar-panel"></i>
